@@ -1,11 +1,18 @@
 import './App.css';
+import { API_URL } from './utils';
+import { fetchData } from './redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import AddUser from './components/AddUser/AddUser';
 import Table from './components/Table/Table';
-import { useFetch } from './hooks/useFetch';
-import { API_URL } from './utils';
 
 function App() {
-  const { data, error, isLoading } = useFetch(API_URL);
+  const { data, error, isLoading } = useSelector(({ usersData }) => usersData);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchData(API_URL));
+  }, []);
 
   if (isLoading) {
     return <div>LOADING</div>;
