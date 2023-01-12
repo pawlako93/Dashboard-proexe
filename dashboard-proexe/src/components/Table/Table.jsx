@@ -7,13 +7,13 @@ const Table = ({ data }) => {
       <thead>
         <tr>
           {TABLE_HEADERS.map((header) => (
-            <th>{header}</th>
+            <th key={header}>{header}</th>
           ))}
         </tr>
       </thead>
       <tbody>
         {data?.map(({ id, name, username, email, address: { city } }) => (
-          <tr>
+          <tr key={id}>
             <td>{id}</td>
             <td>{name}</td>
             <td>{username}</td>
