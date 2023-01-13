@@ -10,3 +10,9 @@ export const TABLE_HEADERS = [
   'edit',
   'delete',
 ];
+
+export const SORTING = {
+  ASCENDING: 'ascending',
+  DESCENDING: 'descending',
+  DEFAULT: 'default',
+};

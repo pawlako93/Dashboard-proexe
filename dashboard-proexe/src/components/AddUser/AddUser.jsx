@@ -1,15 +1,17 @@
-import React from 'react';
+import './AddUser.css';
 import { useModal } from '../../hooks/useModal';
-import Modal from '../Modal/Modal';
 import AddUserForm from './AddUserForm';
+import Button from '../Button/Button';
+import Modal from '../Modal/Modal';
+import React from 'react';
 
 const AddUser = () => {
   const { isModalOpen, handleModalToggle } = useModal();
 
   return (
-    <div>
+    <div className='container'>
       <h4>User List</h4>
-      <button onClick={handleModalToggle}>Add new</button>
+      <Button onClick={handleModalToggle} typeOfButton='add' text='Add new' />
       {isModalOpen && (
         <Modal closeModal={handleModalToggle}>
           <AddUserForm closeModal={handleModalToggle} />

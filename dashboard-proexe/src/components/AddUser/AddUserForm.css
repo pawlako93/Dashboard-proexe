@@ -1,0 +1,12 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.add-form button {
+  width: 50%;
+  margin: 10px 0;
+}

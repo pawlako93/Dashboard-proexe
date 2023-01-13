@@ -21,6 +21,14 @@ export const useForm = (callback, validate, initialValues) => {
   const handleChange = (event) => {
     event.persist();
     const { name, value } = event.target;
+    if (name === 'city') {
+      setFormData((prevState) => {
+        return {
+          ...prevState,
+          address: { ...formData.address, [name]: value },
+        };
+      });
+    }
     setFormData((prevState) => {
       return { ...prevState, [name]: value };
     });

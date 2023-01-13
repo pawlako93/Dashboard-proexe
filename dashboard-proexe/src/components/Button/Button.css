@@ -1,0 +1,33 @@
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.add {
+  background-color: #4c59af;
+}
+
+.add:hover {
+  background-color: #384385;
+}
+
+.edit {
+  background-color: #ff9d00;
+}
+
+.edit:hover {
+  background-color: #ff9d00d9;
+}
+.delete {
+  background-color: #de3f18;
+}
+
+.delete:hover {
+  background-color: #de4018b4;
+}
