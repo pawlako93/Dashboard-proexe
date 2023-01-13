@@ -24,15 +24,13 @@ const Table = ({ data }) => {
     setUsers(sortedData);
   };
 
-  if (users.length === 0) <p>Table is empty</p>;
-
   return (
     <table className='table'>
       <thead>
         <tr>
           {TABLE_HEADERS.map((header) => (
             <th
-              className={header === 'username' && `${sortingType}`}
+              className={header === 'username' ? `${sortingType}` : null}
               onClick={header === 'username' ? handleSortByUsername : null}
               key={header}
             >

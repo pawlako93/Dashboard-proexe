@@ -15,17 +15,23 @@ function App() {
   }, []);
 
   if (isLoading) {
-    return <div>LOADING</div>;
+    return <div>LOADING... Please wait...</div>;
   }
   if (error) {
     return <div>SOMETHING WENT WRONG</div>;
   }
 
+  const empty = (
+    <div className='empty-container'>
+      <p>Table is empty</p>
+    </div>
+  );
+
   return (
     <div className='App'>
       <h1>Dashboard - Proexe</h1>
       <AddUser />
-      <Table data={data} />
+      {data.length === 0 ? empty : <Table data={data} />}
     </div>
   );
 }
