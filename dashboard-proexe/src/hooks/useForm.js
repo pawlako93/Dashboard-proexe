@@ -25,12 +25,12 @@ export const useForm = (callback, validate, initialValues) => {
       setFormData((prevState) => {
         return {
           ...prevState,
-          address: { ...formData.address, [name]: value },
+          address: { ...formData.address, [name]: value.trim() },
         };
       });
     }
     setFormData((prevState) => {
-      return { ...prevState, [name]: value };
+      return { ...prevState, [name]: value.trim() };
     });
   };
 
